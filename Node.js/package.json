@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@angular/cli": "^13.1.4",
+    "express": "^4.17.2",
+    "jshint": "^2.13.3"
+  },
+  "name": "himanshu",
+  "version": "1.0.0",
+  "description": "This is Himanshu chauhan",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon server.js"
+  },
+  "author": "Himanshu chauhan",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
