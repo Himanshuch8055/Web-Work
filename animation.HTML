@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .progress{
+            background-color: red;
+            height: 2px;
+            animation: load 1s ease-in-out 1;
+        }
+        header{
+            background-color: black;
+            color: white;
+            text-align: start;
+        }
+        .namebar ul li{
+            display: inline-block;
+            font-size: 30px;
+            line-height: 0.1;
+            letter-spacing: 0em;
+            font-weight: 500;
+            font-style: normal;
+            margin: 25px;
+        }
+        footer {
+            font-family: 'Baloo Bhai 2', cursive;
+            background-color: black;
+            color: white;
+            padding: 23px;
+            text-transform: uppercase;
+        }
+        .container{
+            height: 100vh;
+            width: 1349px;
+            background-color: red;
+        }
+        .box{
+            width: 300px;
+            background-color: green;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            animation-name: widthAnimate;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes widthAnimate {
+            from{
+                width: 500px;
+                height: 300px;
+            }
+            to{
+                width: 99vw;
+                height: 100vh;
+            }
+        }
+        @keyframes load {
+            0%{
+                width: 0;
+            }
+            50%{
+                width: 90vw;
+            }
+            100%{
+                width: 100vw;
+            }
+        }
+        @keyframes rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes slide1 {
+            0%{
+                transform: translate(0vw);
+            }
+            100%{
+                transform: translate(100vw);
+            }
+        }
+        @keyframes slide2 {
+            0%{
+                transform: translate(0vw);
+            }
+            100%{
+                transform: translate(100vw);
+            }
+        }
+        @keyframes slide3 {
+            0%{
+                transform: translate(0vw);
+            }
+            100%{
+                transform: translate(100vw);
+            }
+        }
+        img{
+            display: block;
+            margin: auto;
+        }
+        .slider{
+            background-color: orange;
+            height: 100vh;
+            /* width: 99vw; */
+            overflow: hidden;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .img1{
+            transform: translate(0vw);
+            animation: slide1 1s 2s forwards;
+        }
+        .img2{
+            transform: translate(0vw);
+            animation: slide2 1s 2s forwards;
+        }
+        .img3{
+            transform: translate(0vw);
+            animation: slide3 1s 2s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress"></div>
+    <header class="namebar">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Login</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="box">this is me</div>
+    </div>
+    <main>
+        <!-- <img src="/R.png" alt=""> -->
+        <div id="slider">
+            <img class="img1" src="https://source.unsplash.com/collection/190727/1100x800">
+            <img class="img2" src="https://source.unsplash.com/collection/190727/1100x801">
+            <img class="img3" src="https://source.unsplash.com/collection/190727/1100x802">
+        </div>
+    </main>
+    <footer>
+        <p class="center">Copyright &copy; practice set 4 All right reserved</p>
+    </footer>
+</body>
+</html>
